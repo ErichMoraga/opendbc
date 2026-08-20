@@ -66,7 +66,7 @@ class CarInterface(CarInterfaceBase):
           CarInterfaceBase.configure_torque_tune(candidate, ret.lateralTuning, steering_angle_deadzone_deg=0.2)
         # 2021+ TSS2 steering rack swapped into a TSS-P car, not supported
         if fw.ecu == "eps" and fw.fwVersion == b'8965B47070\x00\x00\x00\x00\x00\x00':
-          ret.dashcamOnly = True
+          ret.dashcamOnly = False
 
     elif candidate in (CAR.LEXUS_RX, CAR.LEXUS_RX_TSS2):
       stop_and_go = True
